@@ -1,0 +1,13 @@
+# Optional Speech-to-Text extras (Phase 6) — local, offline, free.
+#
+# The base project (requirements.txt) runs fully without these using the
+# DummySpeechProvider. Install these into the Python 3.12 venv and set
+# STT_PROVIDER=faster_whisper to enable REAL local transcription:
+#
+#     venv/Scripts/python.exe -m pip install -r requirements-stt.txt
+#
+# `av` (PyAV, pulled in by faster-whisper) bundles ffmpeg libraries for
+# decoding; the ffmpeg CLI is still recommended for audio normalization
+# (see docs/STT_ACTIVATION.md). Verified on Python 3.12: faster-whisper 1.2.1,
+# av 18.0.0, ctranslate2 4.8.1.
+faster-whisper==1.2.1

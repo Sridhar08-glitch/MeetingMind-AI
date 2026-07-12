@@ -1,0 +1,16 @@
+[project]
+name = "meetingmind-backend"
+version = "0.6.0"
+description = "MeetingMind AI — AI meeting assistant backend (Django + DRF + Celery)."
+# The project is standardized on a single officially supported Python version.
+requires-python = ">=3.12,<3.13"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]
+addopts = "-ra -q --disable-warnings"
+testpaths = ["apps"]
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]

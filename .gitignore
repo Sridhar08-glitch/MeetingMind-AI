@@ -1,0 +1,78 @@
+# ─────────────────────────────────────────────────────────────
+# MeetingMind AI — .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ── Secrets & environment ────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ── Python / Django ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+venv/
+.venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+db.sqlite3
+db.sqlite3-journal
+
+# ── Django runtime data (never commit) ───────────────────────
+backend/media/
+backend/staticfiles/
+backend/logs/
+backend/demo_media/
+*.log
+
+# ── Local AI models & caches (large binaries) ────────────────
+**/whisper-models/
+**/diarization-models/
+**/models--*/
+.cache/
+
+# ── Node / Next.js ───────────────────────────────────────────
+node_modules/
+.next/
+out/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+frontend/.env.local
+
+# ── Redis / runtime dumps ────────────────────────────────────
+dump.rdb
+*.rdb
+
+# ── Local tooling (portable binaries — install your own) ──────
+tools/
+*.zip
+
+# ── Claude Code / AI-assistant local config ──────────────────
+.claude/
+CLAUDE.md
+AGENTS.md
+.aider*
+
+# ── OS / IDE ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

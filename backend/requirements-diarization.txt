@@ -1,0 +1,11 @@
+# Optional speaker-diarization extras (Phase 15). NOT installed by default —
+# diarization is off unless DIARIZATION_ENABLED=True. Install with:
+#   pip install -r requirements-diarization.txt
+#
+# The token-free default engine ("embedding") uses SpeechBrain ECAPA (a public
+# model, no HuggingFace token) + scikit-learn clustering. The opt-in "pyannote"
+# engine additionally needs `pyannote.audio` and a free HF token (HUGGINGFACE_TOKEN).
+torch>=2.2
+speechbrain>=1.0
+scikit-learn>=1.4
+# pyannote.audio>=3.1   # uncomment for the opt-in higher-accuracy engine (needs HF token)

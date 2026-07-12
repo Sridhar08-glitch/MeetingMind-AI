@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 360" font-family="'Segoe UI', Roboto, Arial, sans-serif">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="0.5" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#4f46e5" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1240" height="360" fill="#f8fafc"/>
+  <rect width="1240" height="8" fill="url(#brand)"/>
+
+  <text x="620" y="52" text-anchor="middle" font-size="27" font-weight="700" fill="#0f172a">How MeetingMind AI Works</text>
+  <text x="620" y="80" text-anchor="middle" font-size="14" fill="#64748b">From sign-up to organizational intelligence — 100% local · private · no paid APIs</text>
+
+  <!-- Stage cards -->
+  <g filter="url(#shadow)">
+    <rect x="28"  y="120" width="216" height="180" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="284" y="120" width="216" height="180" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="540" y="120" width="216" height="180" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="796" y="120" width="216" height="180" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+    <rect x="1052" y="120" width="160" height="180" rx="16" fill="#ffffff" stroke="#e2e8f0"/>
+  </g>
+
+  <!-- top accent bars -->
+  <rect x="28"  y="120" width="216" height="6" rx="3" fill="url(#brand)"/>
+  <rect x="284" y="120" width="216" height="6" rx="3" fill="url(#brand)"/>
+  <rect x="540" y="120" width="216" height="6" rx="3" fill="url(#brand)"/>
+  <rect x="796" y="120" width="216" height="6" rx="3" fill="url(#brand)"/>
+  <rect x="1052" y="120" width="160" height="6" rx="3" fill="url(#brand)"/>
+
+  <!-- number badges -->
+  <circle cx="60" cy="158" r="17" fill="url(#brand)"/>
+  <text x="60" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">1</text>
+  <circle cx="316" cy="158" r="17" fill="url(#brand)"/>
+  <text x="316" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">2</text>
+  <circle cx="572" cy="158" r="17" fill="url(#brand)"/>
+  <text x="572" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">3</text>
+  <circle cx="828" cy="158" r="17" fill="url(#brand)"/>
+  <text x="828" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">4</text>
+  <circle cx="1084" cy="158" r="17" fill="url(#brand)"/>
+  <text x="1084" y="164" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">5</text>
+
+  <!-- Stage 1 -->
+  <text x="92" y="164" font-size="16" font-weight="700" fill="#0f172a">Sign Up &amp; In</text>
+  <text x="48" y="204" font-size="13" fill="#475569">Create an account</text>
+  <text x="48" y="224" font-size="13" fill="#475569">Secure JWT auth</text>
+  <text x="48" y="244" font-size="13" fill="#475569">Your private workspace</text>
+  <text x="48" y="278" font-size="12" fill="#4f46e5" font-weight="600">Owner-scoped data</text>
+
+  <!-- Stage 2 -->
+  <text x="348" y="164" font-size="16" font-weight="700" fill="#0f172a">Upload / Import</text>
+  <text x="304" y="204" font-size="13" fill="#475569">Audio or video file</text>
+  <text x="304" y="224" font-size="13" fill="#475569">YouTube / Vimeo</text>
+  <text x="304" y="244" font-size="13" fill="#475569">Podcast / RSS / URL</text>
+  <text x="304" y="278" font-size="12" fill="#4f46e5" font-weight="600">One real pipeline</text>
+
+  <!-- Stage 3 -->
+  <text x="604" y="164" font-size="16" font-weight="700" fill="#0f172a">AI Processing</text>
+  <text x="560" y="204" font-size="13" fill="#475569">Transcribe · Whisper</text>
+  <text x="560" y="224" font-size="13" fill="#475569">Diarize · ECAPA</text>
+  <text x="560" y="244" font-size="13" fill="#475569">Analyze · Ollama</text>
+  <text x="560" y="278" font-size="12" fill="#4f46e5" font-weight="600">100% local</text>
+
+  <!-- Stage 4 -->
+  <text x="860" y="164" font-size="16" font-weight="700" fill="#0f172a">Results</text>
+  <text x="816" y="204" font-size="13" fill="#475569">Transcript + Speakers</text>
+  <text x="816" y="224" font-size="13" fill="#475569">Summary · Action items</text>
+  <text x="816" y="244" font-size="13" fill="#475569">Decisions · Risks</text>
+  <text x="816" y="278" font-size="12" fill="#4f46e5" font-weight="600">Grounded &amp; cited</text>
+
+  <!-- Stage 5 -->
+  <text x="1116" y="164" font-size="16" font-weight="700" fill="#0f172a">Explore</text>
+  <text x="1072" y="204" font-size="13" fill="#475569">Chat · Knowledge</text>
+  <text x="1072" y="224" font-size="13" fill="#475569">Workspace tasks</text>
+  <text x="1072" y="244" font-size="13" fill="#475569">Executive · Agents</text>
+  <text x="1072" y="278" font-size="12" fill="#4f46e5" font-weight="600">Org intelligence</text>
+
+  <!-- arrows -->
+  <g fill="#94a3b8">
+    <path d="M250 210 l22 0 l0 -6 l14 9 l-14 9 l0 -6 l-22 0 z"/>
+    <path d="M506 210 l22 0 l0 -6 l14 9 l-14 9 l0 -6 l-22 0 z"/>
+    <path d="M762 210 l22 0 l0 -6 l14 9 l-14 9 l0 -6 l-22 0 z"/>
+    <path d="M1018 210 l22 0 l0 -6 l14 9 l-14 9 l0 -6 l-22 0 z"/>
+  </g>
+
+  <text x="620" y="338" text-anchor="middle" font-size="12" fill="#94a3b8">Faster-Whisper · Ollama · SpeechBrain ECAPA · PostgreSQL · Celery — all on your own machine</text>
+</svg>

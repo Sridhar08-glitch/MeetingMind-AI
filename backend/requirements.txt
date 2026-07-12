@@ -1,0 +1,36 @@
+# MeetingMind AI — backend dependencies.
+# Officially supported (and only) Python version: 3.12 (see pyproject.toml).
+# Optional local Speech-to-Text extras live in requirements-stt.txt.
+# Core
+Django>=5.1,<5.2
+djangorestframework==3.15.2
+djangorestframework-simplejwt[crypto]==5.5.1
+psycopg2-binary==2.9.12
+django-cors-headers==4.4.0
+django-environ==0.13.0
+django-filter==24.3
+drf-spectacular==0.27.2
+
+# Background processing
+celery==5.4.0
+redis==5.0.4
+
+# Media / utilities
+Pillow==11.3.0
+python-dotenv==1.1.1
+
+# Testing
+pytest==8.2.2
+pytest-django==4.8.0
+factory_boy==3.3.0
+
+# Phase 13 — live meetings over WebSocket (ASGI)
+channels==4.1.0
+channels-redis==4.2.0
+daphne==4.1.2
+
+# Phase 14 — universal media import (public-content only; all AI stays local).
+# yt-dlp fetches public video/audio (reuses the configured ffmpeg); feedparser
+# parses podcast/RSS feeds. Direct-URL downloads use the stdlib (no requests dep).
+yt-dlp>=2026.7.4
+feedparser==6.0.12

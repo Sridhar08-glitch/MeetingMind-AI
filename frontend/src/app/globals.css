@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+/*
+  MeetingMind AI design system.
+  A calm, professional SaaS palette built around an indigo/violet brand accent
+  on a soft slate background, with a full neutral ramp for surfaces and text.
+*/
+@theme {
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-foreground: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+
+  --color-success: #16a34a;
+  --color-success-bg: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-bg: #fef3c7;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fee2e2;
+  --color-info: #2563eb;
+  --color-info-bg: #dbeafe;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --radius-xl: 0.875rem;
+}
+
+/*
+  Dark theme. Because every surface/text/badge uses the design tokens above,
+  redefining them here themes the entire app (dialogs, toasts, tables, forms,
+  code blocks) in one place. Light-tint tokens (brand-50/-100, *-bg) flip to
+  dark tints; accent/semantic colors lighten so they stay legible and keep their
+  meaning (success = green, warning = amber, danger = red, info/AI = indigo/blue).
+*/
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+
+  --color-background: #0b1120;
+  --color-surface: #111827;
+  --color-foreground: #e6eaf2;
+  --color-muted: #94a3b8;
+  --color-border: #273244;
+
+  /* brand ramp: 50–200 become dark tints (used as backgrounds/rings); 400–700
+     stay/lighten so solid buttons keep contrast and hover *lightens* on dark. */
+  --color-brand-50: #1c2140;
+  --color-brand-100: #262c52;
+  --color-brand-200: #37407a;
+  --color-brand-300: #4b56b8;
+  --color-brand-400: #a5b4fc;
+  --color-brand-500: #818cf8;
+  --color-brand-600: #6366f1;
+  --color-brand-700: #818cf8;
+  --color-brand-800: #c7d2fe;
+
+  --color-success: #4ade80;
+  --color-success-bg: #0f3d2a;
+  --color-warning: #fbbf24;
+  --color-warning-bg: #3d2c0c;
+  --color-danger: #f87171;
+  --color-danger-bg: #3f1d1d;
+  --color-info: #60a5fa;
+  --color-info-bg: #14294c;
+
+  /* Built-in slate ramp: light-end shades (used as backgrounds/borders/rings)
+     flip dark; mid shades used as muted text lighten. slate-900 is intentionally
+     left dark so modal backdrops (bg-slate-900/40) stay dark. */
+  --color-slate-50: #151c2c;
+  --color-slate-100: #1c2537;
+  --color-slate-200: #2a3448;
+  --color-slate-300: #3b4860;
+  --color-slate-500: #94a3b8;
+  --color-slate-600: #cbd5e1;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+/* Thin, unobtrusive scrollbars for scrollable panels. */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+
+/* --- Animations (subtle; disabled under prefers-reduced-motion) --- */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-fade-up { animation: fadeUp 220ms ease-out both; }
+.animate-pop-in { animation: popIn 140ms ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Skeleton shimmer (motion-reduced friendly) --- */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--color-border) 25%, var(--color-background) 37%, var(--color-border) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 0.5rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; background: var(--color-border); }
+}
