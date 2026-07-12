@@ -4,7 +4,7 @@ All notable changes to MeetingMind AI. This project was built incrementally in p
 milestones below are grouped under the **1.0.0** release. Format loosely follows
 [Keep a Changelog](https://keepachangelog.com/).
 
-## [1.0.0] — 2026-07-09
+## [1.0.0] — 202-03-09
 
 **MeetingMind AI v1.0 — feature complete.** A fully local, private, AI meeting-intelligence
 platform: transcription, grounded AI analysis, meeting chat, a human-in-the-loop workspace, a
