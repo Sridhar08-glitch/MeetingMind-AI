@@ -646,7 +646,7 @@ in the Software without restriction...
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:6366f1,100:4f46e5&height=120&section=footer&text=Built%20with%20❤️%20%C2%B7%20100%25%20Local%20%C2%B7%20Private%20by%20Design&fontSize=18&fontColor=ffffff&fontAlignY=68" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:6366f1,100:4f46e5&height=120&section=footer&text=Build%20by%20❤️%20%C2%B7%20100%25%20Local%20%C2%B7%20Private%20by%20Design&fontSize=18&fontColor=ffffff&fontAlignY=68" width="100%"/>
 
 <br/>
 
